@@ -19,7 +19,7 @@ jobs:
      - name: test the application
        run: dotnet test src/Tests/Nop.Tests/Nop.Tests.csproj --logger "trx;LogFileName=testresults.trx"
      - name: Zip test logs
-       run: zip -r test-logs.zip testresults.trx
+       run: zip -r test-logs.zip . -i testresults.trx
      - name: uplaod artifacts
        uses: actions/upload-artifact@v4
        with:
