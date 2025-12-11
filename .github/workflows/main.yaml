@@ -14,4 +14,6 @@ jobs:
         dotnet-version: 9.0.x
      - name: restore the dependencies
        run: dotnet restore src/Presentation/Nop.Web/Nop.Web.csproj
+     - name: compile the application
+       run: dotnet build --configuration=Release src/Presentation/Nop.Web/Nop.Web.csproj --no-restore
         
