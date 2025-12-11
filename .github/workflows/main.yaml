@@ -8,5 +8,5 @@ jobs:
      runs-on: ubuntu-latest
      steps:
      - name: restore the dependencies
-       run: dotnet restore src/Presentation/Nop.Web
+       run: dotnet restore src/Presentation/Nop.Web/Nop.Web.csproj
         
