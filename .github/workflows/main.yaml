@@ -17,7 +17,7 @@ jobs:
      - name: compile the application
        run: dotnet build --configuration=Release src/Presentation/Nop.Web/Nop.Web.csproj --no-restore
      - name: test the application
-       run: dotnet test --logger "trx;LogFileName=testresults.trx" src/Tests/Nop.Tests/Nop.Tests.csproj
+       run: dotnet test src/Tests/Nop.Tests/Nop.Tests.csproj --logger "trx;LogFileName=./testresults.trx"
      - name: Zip test logs
        run: zip -r test-logs.zip testresults.trx
      - name: uplaod artifacts
