@@ -16,4 +16,6 @@ jobs:
        run: dotnet restore src/Presentation/Nop.Web/Nop.Web.csproj
      - name: compile the application
        run: dotnet build --configuration=Release src/Presentation/Nop.Web/Nop.Web.csproj --no-restore
+     - name: test the application
+       run: dotnet test src/Tests/Nop.Tests/Nop.Tests.csproj
         
