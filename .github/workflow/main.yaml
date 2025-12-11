@@ -1,0 +1,11 @@
+on: 
+    push:
+        branches: develop
+    workflow_dispatch:
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+     - name: restore the dependencies
+       run: dotnet restore src/Presentation/Nop.Web
+        
