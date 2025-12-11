@@ -18,4 +18,9 @@ jobs:
        run: dotnet build --configuration=Release src/Presentation/Nop.Web/Nop.Web.csproj --no-restore
      - name: test the application
        run: dotnet test src/Tests/Nop.Tests/Nop.Tests.csproj
+     - name: publish the project
+       run: dotnet publish src/Presentation/Nop.Web/Nop.Web.csproj \
+            --configuration Release \
+            --output published
+
         
